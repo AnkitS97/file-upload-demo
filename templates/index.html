@@ -14,21 +14,184 @@
                  <h3>Predict Loan Repayment</h3>
             </div>
           <div class="card-body">
+<form method="post" action="/upload" enctype="multipart/form-data" class="form-group">
+    <table style="border:1px solid black;" width="80%" align="center">
+        <TR>
+        <TD colspan="6">
+            <B>LOAN DETAILS</B>
+            <HR>
+        </TD>
+        </TR>
+        <TR>
+        <td><label >Customer ID:</label></td>
+        <td><input type="text" disabled="true" size= 15 id="fname" name="fname"></td>
+        <td><label >Type of Loan</label></td>
+        <td>
+            <select id="type_of_loan" name="type_of_loan"  >
+                <option value="volvo">Home</option>
+                <option value="saab">Personal</option>
+                <option value="fiat">Others</option>
+            </select>
+        </td>
+        <TD>
+            <label >Loan Amount(Rs.):</label>
+        </TD>
+        <TD>
+            <input type="number" size= 15 id="fname" name="fname">
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <label >Duration(years):</label>
+        </TD>
+        <TD>
+            <select >
+                <option >1</option><option >2</option><option >3</option><option >4</option><option >5</option><option >10</option><option >15</option><option >20</option><option >25</option>
+            </select>
+        </TD>
+        <TD>
+            <label >Date of Application:</label>
+        </TD>
+        <TD>
+            <input type="date" size= 15 id="fname" name="fname">
+        </TD>
+    </TR>
+    <TR>
+        <TD colspan="6"><b>PERSONAL DETAILS</b><HR></TD>
+    </TR>
+    <TR>
+        <TD>Gender:</TD>
+        <TD>
+            <select >
+                <option >Male</option><option >Female</option><option >Don't want to reveal</option>
+            </select>
+        </TD>
+        <TD>Date of Birth:</TD>
+        <TD>
+            <input type="date" size= 15 id="fname" name="fname">
+        </TD>
+        <TD>Mobile:</TD>
+        <TD>
+            <input type="text" size= 15 id="fname" name="fname">
+        </TD>
+    </TR>
+    <TR>
+        <TD>Phone(Home):</TD>
+        <TD><input type="tel" size= 15 id="fname" name="fname"></TD>
+        <TD>Email:</TD>
+        <TD><input type="email" size= 15 id="fname" name="fname"></TD>
+        <TD>Address:</TD>
+        <TD><textarea rows=2  size= 30 id="fname" name="fname"></textarea></TD>
+    </TR>
+<TR>
+        <TD>City</TD>
+        <TD><input type="text" size= 15 id="fname" name="fname"></TD>
 
-            <form method="post" action="/upload" enctype="multipart/form-data" class="form-group">
-                <input type="file" id="file" name="file" class="form-control-file">
-                </br>
-                <button type="submit" value="submit" class="btn btn-outline-primary">Submit</button>
-            </form>
+        <TD>Type of City</TD>
+        <TD>
+             <select >
+                <option >Urban</option><option >Semi-Urban</option><option >Rural</option>
+             </select>
+        </TD>
+
+        <TD>Married:</TD>
+        <TD>
+            <select >
+                <option >Yes</option><option >No</option><option >Divorced</option>
+            </select>
+        </TD>
+    </TR>
+<TR>
+        <TD>Number of Children:</TD>
+        <TD>
+            <select >
+                <option >1</option><option >2</option><option >3</option><option >4</option><option >5</option><option >6</option>
+            </select>
+        </TD>
+        <TD>Number of Dependents:</TD>
+        <TD>
+            <select >
+                <option >1</option><option >2</option><option >3</option><option >4</option><option >5</option><option >6</option>
+            </select>
+        </TD>
+        <TD>Type of ID submitted:</TD>
+        <TD>
+            <select >
+                <option >Aadhar Card</option><option >Voter ID</option><option >Passport</option><option >Driving License</option><option >Ration Card</option>
+            </select>
+        </TD>
+    </TR>
+<TR>
+        <TD>Recently updated</TD>
+        <TD>
+            <select >
+                <option >last month</option><option >2-6 months</option><option >7 month - 1 year</option><option >more than 1 year</option>
+            </select>
+        </TD>
+    </TR>
+    <TR>
+        <td colspan="6"><b>EMPLOYMENT DETAILS</b><HR></td>
+    </TR>
+    <TR>
+        <TD>Type of Employment</TD>
+        <TD>
+            <select >
+                <option >Job</option><option >Business</option><option >Professional</option>
+            </select>
+        </TD>
+        <TD>Duration of current employment:</TD>
+        <TD>
+            <select >
+                <option >Less than 6 months</option><option >7- 12 months</option><option >1-2 years</option><option >3-5 years</option><option >More than 5 years</option>
+            </select>
+        </TD>
+        <TD>Earnings ( Rs. per month):</TD>
+        <TD><input type="text" size= 15 id="fname" name="fname"></TD>
+    </TR>
+    <TR>
+        <TD>Office Address:</TD>
+        <TD> <textarea rows=2  size= 25 id="fname" name="fname"></textarea></TD>
+        <TD>City:</TD>
+        <TD><input type="text" size= 15 id="fname" name="fname"></TD>
+        <TD>Phone(Office):</TD>
+        <TD><input type="tel" size= 15 id="fname" name="fname"></TD>
+    </TR>
+    <TR><TD colspan="6"><b>ASSET DETAILS</b><hr></TD></TR>
+    <TR>
+        <TD>House:</TD>
+        <TD>
+            <select >
+                <option >Owned</option><option >Rented</option><option >Parental</option>
+            </select>
+        </TD>
+        <TD>Do you own a car:</TD>
+        <TD>
+            <select >
+                <option >Yes</option><option >No</option>
+            </select>
+        </TD>
+        <TD>Model:</TD>
+        <TD> <input type="text" size= 15 id="fname" name="fname"></TD>
+    </TR>
+    <TR>
+        <TD>Total value of Goods/Property(Rs.):
+        </TD>
+        <TD> <input type="text" size= 15 id="fname" name="fname">
+        </TD>
+    </TR>
+</table>
+
+ <table align="center">
+     <TR>
+        <TD><input type="reset" value="Reset" class="btn btn-outline-primary"></TD>
+         <TD><button type="submit" value="Next" class="btn btn-outline-primary">Submit</button></TD>
+
+    </TR>
+
+ </table>
+</form>
           </div>
         </div>
-
-        {% if uploaded == True %}
-            <div class="alert alert-primary" role="alert">
-              File uploaded
-            </div>
-        {% endif %}
-
     </div>
 </div>
 </body>
